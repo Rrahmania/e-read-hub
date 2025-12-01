@@ -13,7 +13,7 @@ function Footer() {
         </div>
         <div className="footer-contact">
           <h3>Hubungi Kami</h3>
-          <p>Email: support@ereadhub.com</p>
+          <p>Email: EReadHub@gmail.com</p>
           <p>Telepon: +62 812 3456 7890</p>
         </div>
       </div>
@@ -24,3 +24,4 @@ function Footer() {
   );
 }
 export default Footer;
+
