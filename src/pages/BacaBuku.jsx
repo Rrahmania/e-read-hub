@@ -5,6 +5,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "./BacaBuku.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+
 const BacaBuku = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -27,7 +28,6 @@ const BacaBuku = () => {
     setNumPages(numPages);
   }
 
-  // Navigasi Halaman
   const changePage = (offset) => {
     setPageNumber((prevPage) => prevPage + offset);
   };
@@ -39,12 +39,7 @@ const BacaBuku = () => {
 
   return (
     <div className="read-mode-container">
-      <button className="btn-back" onClick={() => navigate("/books")}>
-        <span>&larr;</span> Kembali
-      </button>
-
       <div className="read-layout">
-        {/* SIDEBAR KIRI */}
         <div className="read-sidebar">
           <div className="sidebar-cover-wrapper">
             <img src={book.image} alt={book.title} className="sidebar-cover" />
@@ -58,11 +53,9 @@ const BacaBuku = () => {
           </div>
         </div>
 
-        {/* --- AREA TENGAH (PDF VIEWER) --- */}
         <div className="read-content-area">
           <div className="white-paper">
             <div className="pdf-container">
-              {/* LOGIKA: Cek apakah ada link PDF? */}
               {book.pdfLink ? (
                 <Document
                   file={book.pdfLink}
@@ -76,7 +69,6 @@ const BacaBuku = () => {
                     </div>
                   }
                 >
-                  {/* INI BAGIAN PENTING YANG KURANG TADI */}
                   <Page
                     pageNumber={pageNumber}
                     renderTextLayer={false}
@@ -99,8 +91,6 @@ const BacaBuku = () => {
             </div>
           </div>
         </div>
-
-        {/* --- NAVIGASI --- */}
         <div className="read-controls">
           <button
             className="nav-btn up"
