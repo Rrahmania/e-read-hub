@@ -43,7 +43,7 @@ export const booksData = [
     id: 6,
     title: "Dunia Ini Adalah Tempat Cobaan Dan Ujian",
     author: "Ustadz Yazid bin Abdul Qadir Jawas",
-    category: "Religi, dakwah, dan Islam.i",
+    category: "Religi, dakwah, dan Islam",
     image: "/images/duniainiadalahtempatcobaandanujian.png",
     pdfLink: "/pdf/Duniaadalahtempatcobaan&ujian.pdf",
   },
@@ -64,3 +64,4 @@ export const booksData = [
     pdfLink: "/pdf/TekaTekiRumahAneh.pdf",
   },
 ];
+
